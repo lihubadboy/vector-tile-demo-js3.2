@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+  <title>矢量大数据可视化-Vector Tile</title>
+<link rel="stylesheet" href="http://donglc.arcgis.cn:18080/jsapi/esri/css/esri.css">
+<link rel="stylesheet" href="css/flat/flat.css">
+<link rel="stylesheet" href="css/style.css">
+  <style>
+    html, 
+    body, 
+    #map {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script src="http://donglc.arcgis.cn:18080/jsapi/init.js"></script>
+  <script src="js/color.all.min.js"></script> 
+  <script src="js/vectorTileDemo.js"></script>
+ <style>
+  #colorSelector{display: none;}
+  .cp-exit{
+    display: none;
+  }
+  .cp-resize{
+    display: none;
+  }
+  </style>
+
+</head>
+<script>
+    function ShowcolorSelector()
+    {
+      var pdisplaystr = document.getElementById("colorSelector").style.display;
+      if(pdisplaystr=="")
+        document.getElementById("colorSelector").style.display="block";
+        else
+        {document.getElementById("colorSelector").style.display="";}
+    }
+    </script>
+
+<body class="flat" style="overflow-x:hidden";"overflow-y:hidden">
+  <div id="map"></div>
+  <div>  
+    <img style="position: absolute; top: 0; left: 0; border: 0;height: 100px; z-index:999;" src="./img/DT.png">
+    <span style="position: absolute;font-family:MicrosoftYaHei;font-size:24px;
+    color:#fff;float:left;z-index:999;left: 120px;top: 20px;">矢量大数据可视化-Vector Tile</span>
+    <button onclick="ShowcolorSelector()" style="outline:none;position:absolute;
+    right:2.5px;bottom:4px;z-index:999;	
+    background: url('./img/arrow-selector.png');background-position:-15px -45px; width: 15px;height: 20px; border-width:0;background-repeat: no-repeat;"></button>
+    </div>
+      <div id="viewDiv">
+        <div class="flight-style-btn-grp">
+            <span class="flight-style-btn red "></span>
+            <span class="flight-style-btn orange"></span>
+            <span class="flight-style-btn green"></span>
+            <span class="flight-style-btn blue"></span>
+            <span class="flight-style-btn pink"></span>
+            <span class="flight-style-btn white"></span>
+        </div>
+        <div class="color-selector" id="colorSelector">
+        </div>
+      </div>
+    </body>
+    </html>
